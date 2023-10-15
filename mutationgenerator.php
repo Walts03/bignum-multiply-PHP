@@ -1,8 +1,7 @@
 <?php
 $operators1 = ['*', '/', '+', '-'];
 $operators2 = ['+', '-', '*', '/'];
-$operators3 = ['>', '<'];
-
+$operators3 = ['+', '-'];
 // Original multiplyBigNumbers function
 function multiplyBigNumbers($num1, $num2)
 {
@@ -73,7 +72,7 @@ foreach ($operators1 as $op1) {
 
             echo "\t\t" . 'for ($j = $len2 - 1; $j >= 0; $j--) {' . "\n";
             echo "\t\t\t" . '$digit2 = (int)$num2[$j];' . "\n";
-            echo "\t\t\t" . '$product = $digit1 ' . $op1 . ' $digit2 ' . $op2 . ' $result[$i + $j + 1] ' . $op2 . ' $carry;' . "\n";
+            echo "\t\t\t" . '$product = $digit1 ' . $op1 . ' $digit2 ' . $op2 . ' $result[$i + $j + 1] ' . $op3 . ' $carry;' . "\n";
             echo "\t\t\t" . '$carry = (int)floor($product / 10);' . "\n";
             echo "\t\t\t" . '$result[$i + $j + 1] = $product % 10;' . "\n";
             echo "\t\t" . '}' . "\n";

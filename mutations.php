@@ -57,7 +57,7 @@ function multiplyBigNumbers1($num1, $num2)
         $digit1 = (int)$num1[$i];
         for ($j = $len2 - 1; $j >= 0; $j--) {
             $digit2 = (int)$num2[$j];
-            $product = $digit1 * $digit2 + $result[$i + $j + 1] + $carry;
+            $product = $digit1 * $digit2 + $result[$i + $j + 1] - $carry;
             $carry = (int)floor($product / 10);
             $result[$i + $j + 1] = $product % 10;
         }
@@ -81,7 +81,7 @@ function multiplyBigNumbers2($num1, $num2)
         $digit1 = (int)$num1[$i];
         for ($j = $len2 - 1; $j >= 0; $j--) {
             $digit2 = (int)$num2[$j];
-            $product = $digit1 * $digit2 - $result[$i + $j + 1] - $carry;
+            $product = $digit1 * $digit2 - $result[$i + $j + 1] + $carry;
             $carry = (int)floor($product / 10);
             $result[$i + $j + 1] = $product % 10;
         }
@@ -129,7 +129,7 @@ function multiplyBigNumbers4($num1, $num2)
         $digit1 = (int)$num1[$i];
         for ($j = $len2 - 1; $j >= 0; $j--) {
             $digit2 = (int)$num2[$j];
-            $product = $digit1 * $digit2 * $result[$i + $j + 1] * $carry;
+            $product = $digit1 * $digit2 * $result[$i + $j + 1] + $carry;
             $carry = (int)floor($product / 10);
             $result[$i + $j + 1] = $product % 10;
         }
@@ -153,7 +153,7 @@ function multiplyBigNumbers5($num1, $num2)
         $digit1 = (int)$num1[$i];
         for ($j = $len2 - 1; $j >= 0; $j--) {
             $digit2 = (int)$num2[$j];
-            $product = $digit1 * $digit2 * $result[$i + $j + 1] * $carry;
+            $product = $digit1 * $digit2 * $result[$i + $j + 1] - $carry;
             $carry = (int)floor($product / 10);
             $result[$i + $j + 1] = $product % 10;
         }
@@ -177,7 +177,7 @@ function multiplyBigNumbers6($num1, $num2)
         $digit1 = (int)$num1[$i];
         for ($j = $len2 - 1; $j >= 0; $j--) {
             $digit2 = (int)$num2[$j];
-            $product = $digit1 * $digit2 / $result[$i + $j + 1] / $carry;
+            $product = $digit1 * $digit2 / $result[$i + $j + 1] + $carry;
             $carry = (int)floor($product / 10);
             $result[$i + $j + 1] = $product % 10;
         }
@@ -201,7 +201,7 @@ function multiplyBigNumbers7($num1, $num2)
         $digit1 = (int)$num1[$i];
         for ($j = $len2 - 1; $j >= 0; $j--) {
             $digit2 = (int)$num2[$j];
-            $product = $digit1 * $digit2 / $result[$i + $j + 1] / $carry;
+            $product = $digit1 * $digit2 / $result[$i + $j + 1] - $carry;
             $carry = (int)floor($product / 10);
             $result[$i + $j + 1] = $product % 10;
         }
@@ -249,7 +249,7 @@ function multiplyBigNumbers9($num1, $num2)
         $digit1 = (int)$num1[$i];
         for ($j = $len2 - 1; $j >= 0; $j--) {
             $digit2 = (int)$num2[$j];
-            $product = $digit1 / $digit2 + $result[$i + $j + 1] + $carry;
+            $product = $digit1 / $digit2 + $result[$i + $j + 1] - $carry;
             $carry = (int)floor($product / 10);
             $result[$i + $j + 1] = $product % 10;
         }
@@ -273,7 +273,7 @@ function multiplyBigNumbers10($num1, $num2)
         $digit1 = (int)$num1[$i];
         for ($j = $len2 - 1; $j >= 0; $j--) {
             $digit2 = (int)$num2[$j];
-            $product = $digit1 / $digit2 - $result[$i + $j + 1] - $carry;
+            $product = $digit1 / $digit2 - $result[$i + $j + 1] + $carry;
             $carry = (int)floor($product / 10);
             $result[$i + $j + 1] = $product % 10;
         }
@@ -321,7 +321,7 @@ function multiplyBigNumbers12($num1, $num2)
         $digit1 = (int)$num1[$i];
         for ($j = $len2 - 1; $j >= 0; $j--) {
             $digit2 = (int)$num2[$j];
-            $product = $digit1 / $digit2 * $result[$i + $j + 1] * $carry;
+            $product = $digit1 / $digit2 * $result[$i + $j + 1] + $carry;
             $carry = (int)floor($product / 10);
             $result[$i + $j + 1] = $product % 10;
         }
@@ -345,7 +345,7 @@ function multiplyBigNumbers13($num1, $num2)
         $digit1 = (int)$num1[$i];
         for ($j = $len2 - 1; $j >= 0; $j--) {
             $digit2 = (int)$num2[$j];
-            $product = $digit1 / $digit2 * $result[$i + $j + 1] * $carry;
+            $product = $digit1 / $digit2 * $result[$i + $j + 1] - $carry;
             $carry = (int)floor($product / 10);
             $result[$i + $j + 1] = $product % 10;
         }
@@ -369,7 +369,7 @@ function multiplyBigNumbers14($num1, $num2)
         $digit1 = (int)$num1[$i];
         for ($j = $len2 - 1; $j >= 0; $j--) {
             $digit2 = (int)$num2[$j];
-            $product = $digit1 / $digit2 / $result[$i + $j + 1] / $carry;
+            $product = $digit1 / $digit2 / $result[$i + $j + 1] + $carry;
             $carry = (int)floor($product / 10);
             $result[$i + $j + 1] = $product % 10;
         }
@@ -393,7 +393,7 @@ function multiplyBigNumbers15($num1, $num2)
         $digit1 = (int)$num1[$i];
         for ($j = $len2 - 1; $j >= 0; $j--) {
             $digit2 = (int)$num2[$j];
-            $product = $digit1 / $digit2 / $result[$i + $j + 1] / $carry;
+            $product = $digit1 / $digit2 / $result[$i + $j + 1] - $carry;
             $carry = (int)floor($product / 10);
             $result[$i + $j + 1] = $product % 10;
         }
@@ -441,7 +441,7 @@ function multiplyBigNumbers17($num1, $num2)
         $digit1 = (int)$num1[$i];
         for ($j = $len2 - 1; $j >= 0; $j--) {
             $digit2 = (int)$num2[$j];
-            $product = $digit1 + $digit2 + $result[$i + $j + 1] + $carry;
+            $product = $digit1 + $digit2 + $result[$i + $j + 1] - $carry;
             $carry = (int)floor($product / 10);
             $result[$i + $j + 1] = $product % 10;
         }
@@ -465,7 +465,7 @@ function multiplyBigNumbers18($num1, $num2)
         $digit1 = (int)$num1[$i];
         for ($j = $len2 - 1; $j >= 0; $j--) {
             $digit2 = (int)$num2[$j];
-            $product = $digit1 + $digit2 - $result[$i + $j + 1] - $carry;
+            $product = $digit1 + $digit2 - $result[$i + $j + 1] + $carry;
             $carry = (int)floor($product / 10);
             $result[$i + $j + 1] = $product % 10;
         }
@@ -513,7 +513,7 @@ function multiplyBigNumbers20($num1, $num2)
         $digit1 = (int)$num1[$i];
         for ($j = $len2 - 1; $j >= 0; $j--) {
             $digit2 = (int)$num2[$j];
-            $product = $digit1 + $digit2 * $result[$i + $j + 1] * $carry;
+            $product = $digit1 + $digit2 * $result[$i + $j + 1] + $carry;
             $carry = (int)floor($product / 10);
             $result[$i + $j + 1] = $product % 10;
         }
@@ -537,7 +537,7 @@ function multiplyBigNumbers21($num1, $num2)
         $digit1 = (int)$num1[$i];
         for ($j = $len2 - 1; $j >= 0; $j--) {
             $digit2 = (int)$num2[$j];
-            $product = $digit1 + $digit2 * $result[$i + $j + 1] * $carry;
+            $product = $digit1 + $digit2 * $result[$i + $j + 1] - $carry;
             $carry = (int)floor($product / 10);
             $result[$i + $j + 1] = $product % 10;
         }
@@ -561,7 +561,7 @@ function multiplyBigNumbers22($num1, $num2)
         $digit1 = (int)$num1[$i];
         for ($j = $len2 - 1; $j >= 0; $j--) {
             $digit2 = (int)$num2[$j];
-            $product = $digit1 + $digit2 / $result[$i + $j + 1] / $carry;
+            $product = $digit1 + $digit2 / $result[$i + $j + 1] + $carry;
             $carry = (int)floor($product / 10);
             $result[$i + $j + 1] = $product % 10;
         }
@@ -585,7 +585,7 @@ function multiplyBigNumbers23($num1, $num2)
         $digit1 = (int)$num1[$i];
         for ($j = $len2 - 1; $j >= 0; $j--) {
             $digit2 = (int)$num2[$j];
-            $product = $digit1 + $digit2 / $result[$i + $j + 1] / $carry;
+            $product = $digit1 + $digit2 / $result[$i + $j + 1] - $carry;
             $carry = (int)floor($product / 10);
             $result[$i + $j + 1] = $product % 10;
         }
@@ -633,7 +633,7 @@ function multiplyBigNumbers25($num1, $num2)
         $digit1 = (int)$num1[$i];
         for ($j = $len2 - 1; $j >= 0; $j--) {
             $digit2 = (int)$num2[$j];
-            $product = $digit1 - $digit2 + $result[$i + $j + 1] + $carry;
+            $product = $digit1 - $digit2 + $result[$i + $j + 1] - $carry;
             $carry = (int)floor($product / 10);
             $result[$i + $j + 1] = $product % 10;
         }
@@ -657,7 +657,7 @@ function multiplyBigNumbers26($num1, $num2)
         $digit1 = (int)$num1[$i];
         for ($j = $len2 - 1; $j >= 0; $j--) {
             $digit2 = (int)$num2[$j];
-            $product = $digit1 - $digit2 - $result[$i + $j + 1] - $carry;
+            $product = $digit1 - $digit2 - $result[$i + $j + 1] + $carry;
             $carry = (int)floor($product / 10);
             $result[$i + $j + 1] = $product % 10;
         }
@@ -705,7 +705,7 @@ function multiplyBigNumbers28($num1, $num2)
         $digit1 = (int)$num1[$i];
         for ($j = $len2 - 1; $j >= 0; $j--) {
             $digit2 = (int)$num2[$j];
-            $product = $digit1 - $digit2 * $result[$i + $j + 1] * $carry;
+            $product = $digit1 - $digit2 * $result[$i + $j + 1] + $carry;
             $carry = (int)floor($product / 10);
             $result[$i + $j + 1] = $product % 10;
         }
@@ -729,7 +729,7 @@ function multiplyBigNumbers29($num1, $num2)
         $digit1 = (int)$num1[$i];
         for ($j = $len2 - 1; $j >= 0; $j--) {
             $digit2 = (int)$num2[$j];
-            $product = $digit1 - $digit2 * $result[$i + $j + 1] * $carry;
+            $product = $digit1 - $digit2 * $result[$i + $j + 1] - $carry;
             $carry = (int)floor($product / 10);
             $result[$i + $j + 1] = $product % 10;
         }
@@ -753,7 +753,7 @@ function multiplyBigNumbers30($num1, $num2)
         $digit1 = (int)$num1[$i];
         for ($j = $len2 - 1; $j >= 0; $j--) {
             $digit2 = (int)$num2[$j];
-            $product = $digit1 - $digit2 / $result[$i + $j + 1] / $carry;
+            $product = $digit1 - $digit2 / $result[$i + $j + 1] + $carry;
             $carry = (int)floor($product / 10);
             $result[$i + $j + 1] = $product % 10;
         }
@@ -777,7 +777,7 @@ function multiplyBigNumbers31($num1, $num2)
         $digit1 = (int)$num1[$i];
         for ($j = $len2 - 1; $j >= 0; $j--) {
             $digit2 = (int)$num2[$j];
-            $product = $digit1 - $digit2 / $result[$i + $j + 1] / $carry;
+            $product = $digit1 - $digit2 / $result[$i + $j + 1] - $carry;
             $carry = (int)floor($product / 10);
             $result[$i + $j + 1] = $product % 10;
         }

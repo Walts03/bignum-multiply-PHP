@@ -56,11 +56,11 @@ function multiplyBigNumbers($num1, $num2)
 }
 
 // Example usage:
-$num1 = "123451232133";
-$num2 = "6789032132131";
+$num1 = "123456789";
+$num2 = "987654321";
 
 $sum = addBigNumbers($num1, $num2);
 $product = multiplyBigNumbers($num1, $num2);
 
-echo $sum . "\n";    // Output: 111111111011111111100
-echo $product; // Output: 12193263113702179545847282294160918382900
+echo $sum . "\n";    // Output: 1111111110
+echo $product; // Output: 121932631112635269

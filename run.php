@@ -1,7 +1,7 @@
 <?php
 require_once("mutations.php");
-$testNum1 = '12345';
-$testNum2 = '67890';
+$testNum1 = "123456789";
+$testNum2 = "987654321";
 
 $testResults = array();
 $totalVariations = 32;
